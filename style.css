@@ -1,0 +1,47 @@
+.testimonial-widget{
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.testimonial-image, .testimonial-text, .testimonial-title{
+	margin-bottom: 30px;
+}
+
+.so-widget-akvo-cover{
+	max-height: 100vh;
+	overflow: hidden;
+	position: relative;
+}
+
+.so-widget-akvo-cover .lang-list{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 80px;
+}
+
+@media( max-width: 768px ){
+	.so-widget-akvo-cover .lang-list{
+		top: 20px;
+	}
+}
+
+.so-widget-akvo-cover .lang-list a[href].active, .so-widget-akvo-cover .lang-list a[href]:hover{
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.so-widget-akvo-cover .cover-overlay{
+	background: rgba( 0, 0, 0, 0.8);
+	position: absolute;
+	padding: 30px;
+	bottom: 0;
+	color: #fff;
+	width: 100%;
+	box-sizing: border-box;
+}
+.so-widget-akvo-cover .cover-overlay-text{
+	max-width: 900px;
+	margin: 0 auto;
+}
