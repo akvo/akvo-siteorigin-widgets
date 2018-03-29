@@ -1,3 +1,4 @@
+/* TESTIMONIAL WIDGET */
 .testimonial-widget{
 	max-width: 800px;
 	margin-left: auto;
@@ -8,7 +9,9 @@
 .testimonial-image, .testimonial-text, .testimonial-title{
 	margin-bottom: 30px;
 }
+/* TESTIMONIAL WIDGET */
 
+/* AKVO COVER WIDGET */
 .so-widget-akvo-cover{
 	max-height: 100vh;
 	overflow: hidden;
@@ -41,8 +44,19 @@
 	width: 100%;
 	box-sizing: border-box;
 }
+.so-widget-akvo-cover .cover-overlay-link{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: block;
+	box-sizing: border-box;
+	top: 0;
+	left: 0;
+}
 
+/* AKVO COVER WIDGET */
 
+/* LOGOS WIDGET */
 .so-widget-logos ul{
 	text-align: center;
 }
@@ -50,3 +64,4 @@
 	margin: 5px;
 	display: inline-block;
 }
+/* LOGOS WIDGET */

@@ -11,4 +11,9 @@
 </ul>
 <?php endif;?>
 <?php $akvo_widgets_template->print_image( $instance['image'] );?>
-<div class='cover-overlay'><div class='cover-overlay-text'><?php echo $instance['text'];?></div></div>
+<div class='cover-overlay'>
+	<div class='cover-overlay-text'><?php echo $instance['text'];?></div>
+	<?php if( isset( $instance['text_url'] ) && $instance['text_url'] ) :?>
+	<a class='cover-overlay-link' href="<?php _e( $instance['text_url'] );?>"></a>
+	<?php endif;?>
+</div>

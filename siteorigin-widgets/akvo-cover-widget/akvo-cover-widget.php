@@ -35,11 +35,16 @@ class Akvo_Cover_Widget extends SiteOrigin_Widget {
 			array(
 				'image' => array(
 					'type' 		=> 'media',
-					'label' 	=> __( 'Choose Image', 'widget-form-fields-text-domain' ),
-					'choose' 	=> __( 'Choose image', 'widget-form-fields-text-domain' ),
-					'update' 	=> __( 'Set image', 'widget-form-fields-text-domain' ),
+					'label' 	=> __( 'Choose Image', 'siteorigin-widgets' ),
+					'choose' 	=> __( 'Choose image', 'siteorigin-widgets' ),
+					'update' 	=> __( 'Set image', 'siteorigin-widgets' ),
 					'library' 	=> 'image',
 					'fallback' 	=> false
+				),
+				'text_url' => array(
+					'type' => 'text',
+					'label' => __('Caption URL', 'siteorigin-widgets'),
+					'default' => ''
 				),
 				'text' => array(
 					'type' 				=> 'tinymce',
