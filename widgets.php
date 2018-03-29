@@ -17,16 +17,33 @@
 		
 		function assets(){
 			
-			wp_enqueue_style('akvo-sow-styles', plugins_url('akvo-siteorigin-widgets/style.css'), false, '1.0.7' );
+			wp_enqueue_style('akvo-sow-styles', plugins_url('akvo-siteorigin-widgets/style.css'), false, '1.0.8' );
+		}
+		
+		function get_image_url( $post_id ){
+			if( $post_id ) return wp_get_attachment_url( $post_id );
+			return false;
 		}
 		
 		function print_image( $post_id ){
 			
-			echo "<img src='".wp_get_attachment_url( $post_id )."' />";
+			$url = $this->get_image_url( $post_id );
+			
+			if( $url ){
+				echo "<img src='".$url."' />";
+			}
+			
 			
 		}
-		
-		
+		function print_bg_image( $post_id ){
+			
+			$url = $this->get_image_url( $post_id );
+			
+			if( $url ){
+				echo "<div class='akvo-bg' style='background-image:url(".$url.")'></div>";
+			}
+			
+		}
 	}
 	
 	global $akvo_widgets_template;

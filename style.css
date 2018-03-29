@@ -65,3 +65,17 @@
 	display: inline-block;
 }
 /* LOGOS WIDGET */
+
+
+.akvo-bg{
+	min-height: 300px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/* AKVO GRID WIDGET */
+.akvo-grid-parent{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+/* AKVO GRID WIDGET */
