@@ -41,7 +41,12 @@
 	width: 100%;
 	box-sizing: border-box;
 }
-.so-widget-akvo-cover .cover-overlay-text{
-	max-width: 900px;
-	margin: 0 auto;
+
+
+.so-widget-logos ul{
+	text-align: center;
+}
+.so-widget-logos li{
+	margin: 5px;
+	display: inline-block;
 }

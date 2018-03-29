@@ -2,10 +2,10 @@
 	
 	/*
 	Plugin Name: Akvo Site Origin Widgets
-	Plugin URI: http://akvo.org/about-us/partners/
-	Description: Add and manage new Akvo partner easily.
+	Plugin URI: http://akvo.org
+	Description: Akvo widgets that works with Site Origin Page Builder
 	Version: 1.0
-	Author: Loic Sans
+	Author: Samuel Thomas
 	Author URI: http://akvo.org/
 	*/
 
@@ -17,13 +17,12 @@
 		
 		function assets(){
 			
-			wp_enqueue_style('akvo-sow-styles', plugins_url('akvo-siteorigin-widgets/style.css'), false, '1.0.2' );
+			wp_enqueue_style('akvo-sow-styles', plugins_url('akvo-siteorigin-widgets/style.css'), false, '1.0.5' );
 		}
 		
 		function print_image( $post_id ){
 			
-			$post = get_post( $post_id );
-			echo "<img src='".$post->guid."' />";
+			echo "<img src='".wp_get_attachment_url( $post_id )."' />";
 			
 		}
 		
