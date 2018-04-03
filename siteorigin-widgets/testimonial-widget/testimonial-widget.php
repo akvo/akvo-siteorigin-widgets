@@ -19,13 +19,13 @@ class Testimonial_Widget extends SiteOrigin_Widget {
 			'testimonial-widget',
 
 			// The name of the widget for display purposes.
-			__('Testimonial Widget', 'hello-world-widget-text-domain'),
+			__('Testimonial Widget', 'siteorigin-widgets'),
 
 			// The $widget_options array, which is passed through to WP_Widget.
 			// It has a couple of extras like the optional help URL, which should link to your sites help or support page.
 			array(
-				'description' => __('A hello world widget.', 'hello-world-widget-text-domain'),
-				'help'        => 'http://example.com/hello-world-widget-docs',
+				'description' => __('Testimonial Widget customized for AKVO.org microstories.', 'siteorigin-widgets'),
+				'help'        => '',
 			),
 
 			//The $control_options array, which is passed through to WP_Widget
@@ -36,9 +36,9 @@ class Testimonial_Widget extends SiteOrigin_Widget {
 			array(
 				'image' => array(
 					'type' 		=> 'media',
-					'label' 	=> __( 'Choose a media thing', 'widget-form-fields-text-domain' ),
-					'choose' 	=> __( 'Choose image', 'widget-form-fields-text-domain' ),
-					'update' 	=> __( 'Set image', 'widget-form-fields-text-domain' ),
+					'label' 	=> __( 'Choose a media thing', 'siteorigin-widgets' ),
+					'choose' 	=> __( 'Choose image', 'siteorigin-widgets' ),
+					'update' 	=> __( 'Set image', 'siteorigin-widgets' ),
 					'library' 	=> 'image',
 					'fallback' 	=> false
 				),
@@ -69,7 +69,7 @@ class Testimonial_Widget extends SiteOrigin_Widget {
 	}
 	
 	function get_template_name($instance) {
-		return 'testimonial';
+		return 'template';
 	}
 
 	function get_template_dir($instance) {

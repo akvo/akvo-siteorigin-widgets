@@ -17,6 +17,10 @@
 	overflow: hidden;
 	position: relative;
 }
+.so-widget-akvo-cover img{
+	box-sizing: border-box;
+	vertical-align: top;
+}
 
 .so-widget-akvo-cover .lang-list{
 	position: absolute;
