@@ -48,7 +48,7 @@ class Next_Anchor_Widget extends SiteOrigin_Widget {
 						),
 						'link' => array(
 							'type' => 'text',
-							'label' => __( 'Anchor Link of the next section', 'siteorigin-widgets' )
+							'label' => __( 'ID of the next section', 'siteorigin-widgets' )
 						),
 						
 					)

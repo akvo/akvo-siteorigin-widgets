@@ -17,6 +17,7 @@
 		
 		function assets(){
 			
+			wp_enqueue_script('akvo-sow-script', plugins_url('akvo-siteorigin-widgets/widget.js'), array('jquery'), null, true );
 			wp_enqueue_style('akvo-sow-styles', plugins_url('akvo-siteorigin-widgets/style.css'), false, '1.0.9' );
 		}
 		

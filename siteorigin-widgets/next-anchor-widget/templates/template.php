@@ -3,7 +3,7 @@
 <ul class='next-anchor-widget'>
 	<?php foreach( $instance['buttons'] as $btn ):?>
 		<?php if( isset( $btn['image'] ) && isset( $btn['link'] ) ):?>
-		<li><a href="<?php _e( $btn['link'] );?>"><?php $akvo_widgets_template->print_image( $btn['image'] );?></a></li>
+		<li><a data-behaviour="next-anchor" href="#<?php _e( $btn['link'] );?>"><?php $akvo_widgets_template->print_image( $btn['image'] );?></a></li>
 		<?php endif;?>
 	<?php endforeach;?>
 </ul>
