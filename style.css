@@ -83,3 +83,21 @@
 	grid-template-columns: 1fr 1fr;
 }
 /* AKVO GRID WIDGET */
+
+/* AKVO IFRAME WIDGET */
+.akvo-iframe-widget{
+	position: relative;
+}
+.akvo-iframe-widget ul{
+	position: absolute;
+	border: red solid 1px;
+	width: 100%;
+	bottom: 0;
+}
+.akvo-iframe-widget ul img, .akvo-iframe-widget ul span{
+	display: inline-block;
+} 
+.akvo-iframe-widget ul span{
+	vertical-align: top;
+}
+/* AKVO IFRAME WIDGET */
