@@ -8,7 +8,17 @@
 	Author: Samuel Thomas
 	Author URI: http://akvo.org/
 	*/
-
+	
+	$inc_files = array(
+		'class-akvo-sow-shortcode.php',
+		'class-akvo-sow-shortcode-nested-filters.php',
+		'class-akvo-sow-shortcode-custom-posts.php'
+	);
+	
+	foreach( $inc_files as $inc_file ){
+		include( $inc_file );
+	}
+	
 	class AKVO_WIDGETS_TEMPLATE{
 		
 		function __construct(){
