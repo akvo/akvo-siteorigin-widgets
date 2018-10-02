@@ -100,3 +100,116 @@
 	vertical-align: top;
 }
 /* AKVO IFRAME WIDGET */
+
+/* NESTED FILTERS */
+.nested-filters{
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+}
+	
+.nested-filters nav{
+	padding: 15px 0;
+	border-bottom: thin solid #e8e8e8;
+	border-top: thin solid #e8e8e8;
+	margin: 30px auto;
+}
+	
+.nested-filters nav ul{
+	list-style: none;
+	margin: 0em auto;
+	position: relative;
+	text-align: left;
+}
+	
+.nested-filters nav ul li{
+	display: inline;
+	padding: 0;
+	margin: 0;
+}
+	
+.nested-filters nav ul li a[href]{
+	padding: 0.25em 0.75em;
+	font-size: 15px;
+	font-weight: 300;
+	background: none!important;
+}
+	
+.nested-filters nav ul li a[href]:hover{
+	color: #404898!important;
+	text-decoration: none;
+}
+	
+.nested-filters #archive-results li.post{
+	padding: 15px;
+	display: block;
+	width: 33%;
+	float: left;
+	position: relative;
+}
+	
+@media screen and (max-width: 1024px) and (min-width: 768px){
+	.nested-filters #archive-results li.post{ width: 50%; }
+}
+	
+@media screen and (max-width: 768px){
+	.nested-filters #archive-results li.post{ width: 100%; }
+}
+	
+.nested-filters #archive-results li.post a[href]{
+	color: inherit;
+	text-decoration: none;
+}
+	
+.nested-filters #archive-results li.post .imageWrapper{
+	background-size: cover;
+	background-position: center center;
+	height: 250px;
+}
+	
+.nested-filters #archive-results li.post:hover .imageWrapper{
+	opacity: 0;
+	animation: fadeOut ease-in 1;
+	-webkit-animation: fadeOut ease-in 1;
+	-moz-animation: fadeOut ease-in 1;
+		
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+		
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	animation-duration: 1s;
+}
+	
+.nested-filters #archive-results li.post .hovercontent{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	opacity: 0;
+}
+	
+.nested-filters #archive-results li.post:hover .hovercontent{
+	opacity: 0;
+	-webkit-animation: fadeIn ease-in 1;
+	-moz-animation: fadeIn ease-in 1;
+	animation: fadeIn ease-in 1;
+		
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+		
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	animation-duration: 1s;
+}
+	
+.nested-filters #archive-results li.post .title{
+	font-weight: bold;
+	margin-top: 20px;
+}
+/* END OF NESTED FILTERS */

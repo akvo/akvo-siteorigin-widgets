@@ -1,5 +1,5 @@
 <?php
-	_e('<ul class="staff floats-in '.$atts['post_type'].'">');
+	_e('<ul class="post-list floats-in '.$atts['post_type'].'">');
 	
 	$the_query = new WP_Query( array( 'post_type' => $atts['post_type'], 'showposts' => $atts['showposts'], ) );
 	
@@ -23,7 +23,7 @@
 			$post_class	= '';
 			$post_class = apply_filters( 'custom_posts_'.$atts['post_type'].'_class', $post_class );
 					
-			_e( '<li class="'.$post_class.'" id="post-'.get_the_ID().'" '.$data_str.'>' );
+			_e( '<li class="'.$post_class.' post" id="post-'.get_the_ID().'" '.$data_str.'>' );
 			
 			$template_file = apply_filters( 'akvo-custom-posts-'.$atts['post_type'].'-item-template', $atts['post_type'] );
 			

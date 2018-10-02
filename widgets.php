@@ -28,7 +28,7 @@
 		function assets(){
 			
 			wp_enqueue_script('akvo-sow-script', plugins_url('akvo-siteorigin-widgets/widget.js'), array('jquery'), null, true );
-			wp_enqueue_style('akvo-sow-styles', plugins_url('akvo-siteorigin-widgets/style.css'), false, '1.1.0' );
+			wp_enqueue_style('akvo-sow-styles', plugins_url('akvo-siteorigin-widgets/style.css'), false, '1.1.1' );
 		}
 		
 		function get_image_url( $post_id ){
@@ -55,6 +55,7 @@
 			}
 			
 		}
+		
 		function getUniqueID( $data ){
 			return substr( md5( json_encode( $data ) ), 0, 8 );
 		}
