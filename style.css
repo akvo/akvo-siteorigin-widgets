@@ -101,12 +101,16 @@
 }
 /* AKVO IFRAME WIDGET */
 
-/* NESTED FILTERS */
-.nested-filters{
+.akvo-sow-container{
 	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 20px;
+}
+
+/* NESTED FILTERS */
+.nested-filters{
+	
 }
 	
 .nested-filters nav{
@@ -141,7 +145,7 @@
 	text-decoration: none;
 }
 	
-.nested-filters #archive-results li.post{
+.akvo-custom-posts li.post{
 	padding: 15px;
 	display: block;
 	width: 33%;
@@ -150,25 +154,25 @@
 }
 	
 @media screen and (max-width: 1024px) and (min-width: 768px){
-	.nested-filters #archive-results li.post{ width: 50%; }
+	.akvo-custom-posts li.post{ width: 50%; }
 }
 	
 @media screen and (max-width: 768px){
-	.nested-filters #archive-results li.post{ width: 100%; }
+	.akvo-custom-posts li.post{ width: 100%; }
 }
 	
-.nested-filters #archive-results li.post a[href]{
+.akvo-custom-posts li.post a[href]{
 	color: inherit;
 	text-decoration: none;
 }
 	
-.nested-filters #archive-results li.post .imageWrapper{
+.akvo-custom-posts li.post .imageWrapper{
 	background-size: cover;
 	background-position: center center;
 	height: 250px;
 }
 	
-.nested-filters #archive-results li.post:hover .imageWrapper{
+.akvo-custom-posts li.post:hover .imageWrapper{
 	opacity: 0;
 	animation: fadeOut ease-in 1;
 	-webkit-animation: fadeOut ease-in 1;
@@ -183,7 +187,7 @@
 	animation-duration: 1s;
 }
 	
-.nested-filters #archive-results li.post .hovercontent{
+.akvo-custom-posts li.post .hovercontent{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -193,7 +197,7 @@
 	opacity: 0;
 }
 	
-.nested-filters #archive-results li.post:hover .hovercontent{
+.akvo-custom-posts li.post:hover .hovercontent{
 	opacity: 0;
 	-webkit-animation: fadeIn ease-in 1;
 	-moz-animation: fadeIn ease-in 1;
@@ -208,7 +212,7 @@
 	animation-duration: 1s;
 }
 	
-.nested-filters #archive-results li.post .title{
+.akvo-custom-posts li.post .title{
 	font-weight: bold;
 	margin-top: 20px;
 }

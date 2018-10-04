@@ -99,9 +99,11 @@ $.fn.double_filters = function(){
 					
 					var $item = $( this );
 					
-					var item_tax_str = $item.data( secondary_tax ).toString(); 
+					var item_tax_str = $item.data( secondary_tax ); 
 					
 					if( item_tax_str ){
+						
+						item_tax_str = item_tax_str.toString();
 						
 						//console.log( item_tax_str );
 						

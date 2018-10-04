@@ -2,6 +2,7 @@
 	
 	global $post;
 	
+	$url = "";
 	$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
 	if( is_array( $thumbnail ) ){
 		$url = $thumbnail[0];

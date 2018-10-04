@@ -1,7 +1,24 @@
 <?php
-	_e('<ul class="post-list floats-in '.$atts['post_type'].'">');
+	_e('<ul class="akvo-custom-posts post-list floats-in '.$atts['post_type'].'">');
 	
-	$the_query = new WP_Query( array( 'post_type' => $atts['post_type'], 'showposts' => $atts['showposts'], ) );
+	$query_atts = array( 'post_type' => $atts['post_type'], 'showposts' => $atts['showposts'], );
+	
+	/* TAXONOMY QUERY - CUSTOM TYPES AND TERMS */
+	if( isset( $atts['filter_by'] ) ){
+		$atts['filter_by'] = explode( ':',  $atts['filter_by'] );
+		if( is_array( $atts['filter_by'] ) && ( count( $atts['filter_by'] ) > 1 ) ){
+			$query_atts['tax_query'] = array(
+				array(
+					'taxonomy' => $atts['filter_by'][0],
+					'field'    => 'slug',
+					'terms'    => $atts['filter_by'][1],
+				)
+			);
+		}
+	}
+	/* TAXONOMY QUERY - CUSTOM TYPES AND TERMS */
+	
+	$the_query = new WP_Query( $query_atts );
 	
 	if( $the_query->have_posts() ):
 		

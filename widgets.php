@@ -27,8 +27,8 @@
 		
 		function assets(){
 			
-			wp_enqueue_script('akvo-sow-script', plugins_url('akvo-siteorigin-widgets/widget.js'), array('jquery'), '1.0.0', true );
-			wp_enqueue_style('akvo-sow-styles', plugins_url('akvo-siteorigin-widgets/style.css'), false, '1.1.1' );
+			wp_enqueue_script('akvo-sow-script', plugins_url('akvo-siteorigin-widgets/widget.js'), array('jquery'), '1.0.1', true );
+			wp_enqueue_style('akvo-sow-styles', plugins_url('akvo-siteorigin-widgets/style.css'), false, '1.1.2' );
 		}
 		
 		function get_image_url( $post_id ){

@@ -19,6 +19,7 @@
 				'post_type'			=> 'new_staffs', 
 				'filters' 			=> '', 
 				'showposts'			=> 100,
+				'filter_by'			=> ''
 				//'cache'				=> '4'
 			);
 		}

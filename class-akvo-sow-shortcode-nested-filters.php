@@ -44,12 +44,12 @@
 			
 			
 			if( count( $terms ) ):
-				echo "<ul>";
+				echo "<ul class=". $list_class .">";
 			
 				if( $global_text ):
 				
 				?>
-				<li class="<?php _e( $list_class );?>">
+				<li>
 					<a href="#" data-filter='primary'><?php _e( $global_text );?></a>
 				</li>
 				<?php endif;
