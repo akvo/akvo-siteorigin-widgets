@@ -12,7 +12,9 @@ class Akvo_Nested_Filters extends SiteOrigin_Widget {
 	
 	function __construct() {
 		//Here you can do any preparation required before calling the parent constructor, such as including additional files or initializing variables.
-
+		
+		global $akvo_widgets_template;
+		
 		//Call the parent constructor with the required arguments.
 		parent::__construct(
 			// The unique id for your widget.
@@ -42,7 +44,7 @@ class Akvo_Nested_Filters extends SiteOrigin_Widget {
 					'type' 			=> 'select',
 					'label' 		=> __( 'Choose Post Type', 'siteorigin-widgets' ),
 					'default' 		=> 'new_staffs',
-					'options' 		=> $this->get_post_types(),
+					'options' 		=> $akvo_widgets_template->get_post_types(),
 					'description'	=> 'Choose from Wordpress Custom Post Types'
 				),
 				'showposts' => array(
@@ -61,14 +63,14 @@ class Akvo_Nested_Filters extends SiteOrigin_Widget {
 					'type' 			=> 'select',
 					'label' 		=> __( 'Primary Filter', 'siteorigin-widgets' ),
 					'default' 		=> 'new_staffs',
-					'options' 		=> $this->get_taxonomies(),
+					'options' 		=> $akvo_widgets_template->get_taxonomies(),
 					'description'	=> 'Choose Primary Filter from Wordpress Custom Taxonomies'
 				),
 				'secondary_filter' => array(
 					'type' 			=> 'select',
 					'label' 		=> __( 'Secondary Filter', 'siteorigin-widgets' ),
 					'default' 		=> 'new_staffs',
-					'options' 		=> $this->get_taxonomies(),
+					'options' 		=> $akvo_widgets_template->get_taxonomies(),
 					'description'	=> 'Choose Secondary Filter from Wordpress Custom Taxonomies'
 				),
 				'cache' => array(

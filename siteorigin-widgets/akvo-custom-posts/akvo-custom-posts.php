@@ -12,7 +12,9 @@ class Akvo_Custom_Posts extends SiteOrigin_Widget {
 	
 	function __construct() {
 		//Here you can do any preparation required before calling the parent constructor, such as including additional files or initializing variables.
-
+		
+		global $akvo_widgets_template;
+		
 		//Call the parent constructor with the required arguments.
 		parent::__construct(
 			// The unique id for your widget.
@@ -42,7 +44,7 @@ class Akvo_Custom_Posts extends SiteOrigin_Widget {
 					'type' 			=> 'select',
 					'label' 		=> __( 'Choose Post Type', 'siteorigin-widgets' ),
 					'default' 		=> 'new_staffs',
-					'options' 		=> $this->get_post_types(),
+					'options' 		=> $akvo_widgets_template->get_post_types(),
 					'description'	=> 'Choose from Wordpress Custom Post Types'
 				),
 				'showposts' => array(
@@ -52,10 +54,10 @@ class Akvo_Custom_Posts extends SiteOrigin_Widget {
 					'description'	=> 'Items per request to be shown'
 				),
 				'filter_taxonomy' => array(
-					'type' 		=> 'select',
-					'label' 	=> __( 'Filter by taxonomy', 'siteorigin-widgets' ),
-					'default' 	=> 'none',
-					'options' 	=> $this->get_taxonomies(),
+					'type' 			=> 'select',
+					'label' 		=> __( 'Filter by taxonomy', 'siteorigin-widgets' ),
+					'default' 		=> 'none',
+					'options' 		=> $akvo_widgets_template->get_taxonomies(),
 					'description'	=> 'Select custom wordpress taxonomy to be filtered'
 				),
 				'filter_value' => array(
@@ -75,21 +77,6 @@ class Akvo_Custom_Posts extends SiteOrigin_Widget {
 			//The $base_folder path string.
 			get_template_directory()."/so-widgets/akvo-nested-filters"
 		);
-	}
-	
-	function get_post_types(){
-		
-		$post_types = apply_filters( 'akvo-nested-filters-post-types', get_post_types() );
-		
-		return $post_types;
-		
-	}
-	
-	function get_taxonomies(){
-		
-		$taxonomies = apply_filters( 'akvo-nested-filters-taxonomies', get_taxonomies() );
-		
-		return $taxonomies;
 	}
 	
 	function get_template_name($instance) {

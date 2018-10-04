@@ -18,6 +18,7 @@
 	foreach( $inc_files as $inc_file ){
 		include( $inc_file );
 	}
+
 	
 	class AKVO_WIDGETS_TEMPLATE{
 		
@@ -59,6 +60,21 @@
 		function getUniqueID( $data ){
 			return substr( md5( json_encode( $data ) ), 0, 8 );
 		}
+		
+		/*
+		* LIST OF POST TYPES THAT ARE IN THE WORDPRESS DASHBOARD
+		*/
+		function get_post_types(){
+			return apply_filters( 'akvo-sow-post-types', get_post_types() );
+		}
+		
+		/*
+		* LIST OF TAXONOMIES THAT ARE IN THE WORDPRESS DASHBOARD
+		*/
+		function get_taxonomies(){
+			return apply_filters( 'akvo-sow-taxonomies', get_taxonomies() );
+		}
+		
 	}
 	
 	global $akvo_widgets_template;
