@@ -1,4 +1,4 @@
-<div class='nested-filters akvo-sow-container'>
+<div class='nested-filters'>
 	<h1 class="backLined"><?php _e( $atts['title'] );?></h1>
 	<?php if(  isset( $atts['primary_filter'] ) && $atts['primary_filter'] ):?>
 	<nav data-behaviour='double-filters' data-target='#archive-results'>
