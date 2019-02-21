@@ -44,7 +44,7 @@
 			
 			
 			if( count( $terms ) ):
-				echo "<ul class=". $list_class .">";
+				echo "<ul class='". $list_class ."-list'>";
 			
 				if( $global_text ):
 				
